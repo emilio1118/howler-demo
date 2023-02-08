@@ -79,7 +79,7 @@ Player.prototype = {
           // Stop the wave animation.
           wave.container.style.display = 'none';
           bar.style.display = 'block';
-          setTimeout(() => self.skip('next'), 3000);
+          self.skip('next');
         },
         onpause: function() {
           // Stop the wave animation.
