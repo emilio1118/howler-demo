@@ -57,6 +57,7 @@ Player.prototype = {
       sound = data.howl = new Howl({
         src: ['./audio/' + data.file + '.mp3'],
         html5: true, // Force to HTML5 so that the audio can stream in (best for large files).
+	  autoSuspend: false,
         onplay: function() {
           // Display the duration.
           duration.innerHTML = self.formatTime(Math.round(sound.duration()));
